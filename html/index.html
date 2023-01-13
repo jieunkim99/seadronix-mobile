@@ -48,6 +48,7 @@
     <link rel="stylesheet" href="../css/main.css" />
     <script src="../js/aos.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/main.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -466,44 +467,5 @@
     <button class="btn-top">
       <span class="material-icons"> north </span>
     </button>
-
-    <script>
-      AOS.init({
-        duration: 1000,
-        delay: 500,
-      });
-
-      const swiper = new Swiper(".news-banner", {
-        slidePerView: 3,
-        spaceBetween: 20,
-        loop: true,
-        /*Navigation arrows*/
-        navigation: {
-          nextEl: ".news-banner .btn--next",
-          prevEl: ".news-banner .btn--prev",
-        },
-      });
-
-      const header = document.querySelector(".header");
-      const btnTop = document.querySelector(".btn-top");
-      btnTop.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      window.addEventListener("scroll", function (e) {
-        console.log(window.scrollY);
-        if (window.scrollY > 0) {
-          header.classList.add("on");
-          btnTop.classList.add("on");
-        } else {
-          header.classList.remove("on");
-          btnTop.classList.remove("on");
-        }
-      });
-
-      /*window.addEventListener("click", function () {
-      alert("너가 클릭했냐?");
-      });*/
-    </script>
   </body>
 </html>
