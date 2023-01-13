@@ -1,3 +1,4 @@
+/* a, span, em, input */
 body {
   font-family: "Lato", "Pretendard", sans-serif;
   font-size: 16px;
@@ -94,6 +95,9 @@ body {
   background-color: #2c6efb;
   color: #fff;
   display: none;
+}
+.header .gnb .list > li .depth02.on {
+  display: block;
 }
 .header .gnb .list > li .depth02 li a {
   height: 40px;
